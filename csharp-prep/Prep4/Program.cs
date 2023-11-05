@@ -6,10 +6,12 @@ class Program
     {
         List<int> numbers = new List<int>();
         
+        Console.WriteLine("Enter a list of numbers. You can type 0 to finish the list.");
+
         int participantNumber = -1;
         while (participantNumber != 0)
         {
-            Console.Write("Enter a number (0 to quit): ");
+            Console.Write("Enter a number: ");
             
             string Response = Console.ReadLine();
             participantNumber = int.Parse(Response);
@@ -40,6 +42,6 @@ class Program
             }
         }
 
-        Console.WriteLine($"The max is: {max}");
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
