@@ -3,7 +3,22 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Develop03 World!");
+    {  
+       bool memorizing = true;
+
+       if (memorizing = true) 
+
+       {
+       Scripture memorize = new Scripture();
+       HiddenRandomWord();
+       }
+
+       else if (HiddenStrings == true) 
+
+       {
+        IscompletelyHidden();
+
+       }
+
     }
 }
