@@ -4,52 +4,41 @@ class Program
 {
     static void Main(string[] args)
     {
+       Displayact Displayact3 = new Displayact();
 
-        //option 1
-      //  Displayact Displayact1 = new Displayact();
-      //  Displayact1.Breathingacttodisplay();
+        char choice = '0';
 
-      //option 2
-     // Displayact Displayact2 = new Displayact();
-     // Displayact2.Reflectingacttodisplay();
-     ////     
-               Listingactivity listingact1 = new Listingactivity();
-               listingact1.Setnameofact("Listing Activity");
-               listingact1.Setinstructions("You will have seconds to list your prompts.");
-               listingact1.Gettimeforact();           
-               string timeinsecString = Console.ReadLine();
-////
-    ////    // Convert the string to an integer
-             if (int.TryParse(timeinsecString, out int timeinsec))
-          {
-             Console.WriteLine(listingact1.DisplayStartingMessage());
-             listingact1.Settimefordisplay(timeinsec);
-             listingact1.GetReadymessag();
-             listingact1.ShowSpinner(3);
-             Console.WriteLine("\nConsider the following prompt:");
-             listingact1.GetRandomPromptforlist();
-             Console.WriteLine("\nEnter your prompts:");
-             private List<string> prompts;
 
-             public PromptCollector()
-            {
-               prompts = new List<string>();
-            }
-             listingact1.CollectPrompt();
-             listingact1.CollectPrompt();
-             listingact1.DisplayPromptCount();
-    //          Console.ReadLine();
-    //          Console.Clear();
-    //          reflectact1.GetRandomQuestionforact();
-    //          reflectact1.ShowSpinner(timeinsec/2);
-    //          reflectact1.GetRandomQuestionforact();
-    //          reflectact1.ShowSpinner(timeinsec/2);
-    //          reflectact1.CountDownInt(3);
-          Console.WriteLine(listingact1.Displayendingmessage());
-           }
-          else
-            {
-               Console.WriteLine("Invalid input for time. Please enter a valid number.");
-          }
+        while ( choice != '4')
+
+        {
+
+        Console.WriteLine("The options are:  ");
+        Console.WriteLine("1. Breath ");
+        Console.WriteLine("2. Reflect ");
+        Console.WriteLine("3. list");
+        Console.WriteLine("4. quit");
+
+        choice =Console.ReadKey().KeyChar;
+        Console.WriteLine();
+
+        switch (choice)
+
+           {
+            case '1':
+                 Displayact3.Breathingacttodisplay();
+                 break;
+            case '2':
+                 Displayact3.Reflectingacttodisplay();
+                 break;
+            case '3':
+                 Displayact3.Listingactivitytodisplay(); 
+                 break;
+            case '4':
+                 Console.WriteLine ("Press any key to quit.");
+                 break;
+             }
+         Console.ReadKey();
+          } 
        }
 }

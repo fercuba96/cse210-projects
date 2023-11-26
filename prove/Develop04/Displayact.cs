@@ -72,5 +72,43 @@ public class Displayact
 
     }
 
+    public void Listingactivitytodisplay()
 
+    {
+
+        Listingactivity listingact1 = new Listingactivity();
+               listingact1.Setnameofact("Listing Activity");
+               listingact1.Setinstructions("You will have seconds to list your prompts.");
+               listingact1.Gettimeforact();           
+               string timeinsecString = Console.ReadLine();
+////
+    ////    // Convert the string to an integer
+             if (int.TryParse(timeinsecString, out int timeinsec))
+          {
+             Console.WriteLine(listingact1.DisplayStartingMessage());
+             listingact1.Settimefordisplay(timeinsec);
+             listingact1.GetReadymessag();
+             listingact1.ShowSpinner(3);
+             Console.WriteLine("\nConsider the following prompt:");
+             listingact1.GetRandomPromptforlist();
+             Console.WriteLine("\nEnter your prompts:");
+           //  List<string> prompts = new List<string>();
+           //  Console.Write("Enter a prompt: ");
+           //  string userPrompt = Console.ReadLine();
+           //  prompts.Add(userPrompt);
+           //  Console.WriteLine($"Number of prompts collected: {prompts.Count}");
+             listingact1.GetListfromuser(timeinsec);
+    //          Console.Clear();
+    //          reflectact1.GetRandomQuestionforact();
+    //          reflectact1.ShowSpinner(timeinsec/2);
+    //          reflectact1.GetRandomQuestionforact();
+    //          reflectact1.ShowSpinner(timeinsec/2);
+    //          reflectact1.CountDownInt(3);
+          Console.WriteLine(listingact1.Displayendingmessage());
+           }
+          else
+            {
+               Console.WriteLine("Invalid input for time. Please enter a valid number.");
+          }
+       }
 }

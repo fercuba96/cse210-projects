@@ -12,28 +12,42 @@ public class Listingactivity : Activity
      Console.WriteLine("\nTopic: {0}", _words.ElementAt(someRandomprompt));
   }
 
- //  public void GetListfromuser()
-   //{
+  public void GetListfromuser(int collecttime)
+   { 
+    List<string> prompts = new List<string>();
+    DateTime startime = DateTime.Now;
+    DateTime endTime = startime.AddSeconds(collecttime);
 
-    //private List<string> prompts;
-//
-    //public PromptCollector()
-    //{
-    //    prompts = new List<string>();
-    //}
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("Enter a prompt: ");
+            string userPrompt = Console.ReadLine();
 
-    public void CollectPrompt()
-    {
-        Console.Write("Enter a prompt: ");
-        string userPrompt = Console.ReadLine();
-        prompts.Add(userPrompt);
-    }
+            prompts.Add(userPrompt);
+        }
 
-    public void DisplayPromptCount()
-    {
         Console.WriteLine($"Number of prompts collected: {prompts.Count}");
-    }
-     }
+   }
+
+  //  protected List<string> prompts;
+//
+  //  public PromptCollector()
+  //  {
+  //      prompts = new List<string>();
+  //  }
+//
+  //  public virtual void CollectPrompt()
+  //  {
+  //      Console.Write("Enter a prompt: ");
+  //      string userPrompt = Console.ReadLine();
+  //      prompts.Add(userPrompt);
+  //  }
+
+   // public void DisplayPromptCount()
+   // {
+   //     Console.WriteLine($"Number of prompts collected: {prompts.Count}");
+   // }
+}
 
 
 
