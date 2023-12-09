@@ -3,7 +3,9 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Foundation2 World!");
+    {   
+        Product order1 = new Product();
+        order1.Chooseproduct();
+        order1.DisplayOrderList();
     }
 }
