@@ -35,7 +35,6 @@ class Program
             WeatherStatement = "Sunny"
         };
 
-        // Generate messages
         Console.WriteLine(lectureEvent.GetStandardDetails());
         Console.WriteLine(lectureEvent.GetFullDetails());
         Console.WriteLine(lectureEvent.GetShortDescription());
